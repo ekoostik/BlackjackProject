@@ -1,7 +1,7 @@
 package com.skilldistiller.blackjack.app;
 
-import com.skilldistiller.blackjack.entities.Deck;
-import com.skilldistiller.blackjack.entities.Hand;
+import com.skilldistiller.blackjack.entities.*;
+
 
 public class BlackjackApp {
 
@@ -16,10 +16,13 @@ public class BlackjackApp {
 		
 		System.out.println("Welcome to Blackjack !! ");
 		Deck theDeck = new Deck();
-		Hand hand = new Hand();
+		Player pl1 = new Player();
+		Dealer dealer = new Dealer();
+		
+		
 		theDeck.shuffleDeck();
-		hand.addCard(theDeck);
-		System.out.println(hand.calculateValue());
+		
+		System.out.println(dealer.toString());
 	
 		
 }

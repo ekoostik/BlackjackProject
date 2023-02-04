@@ -47,11 +47,7 @@ public class Deck {
 
 	@Override
 	public String toString() {
-		return  deck + " ";
+		return deck + " ";
 	}
-
-
-	
-	
 
 }
