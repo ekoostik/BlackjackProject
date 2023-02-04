@@ -13,6 +13,7 @@ public class DealingCards {
 
 	private void deal() {
 		Deck theDeck = new Deck();
+		theDeck.shuffleDeck();
 		System.out.println(theDeck.getDeck().size());
 	}
 

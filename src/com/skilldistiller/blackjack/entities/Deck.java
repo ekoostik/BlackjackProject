@@ -14,16 +14,16 @@ public class Deck {
 		for (Suit suit : suits) {
 			for (Rank rank : ranks) {
 				Card card = new Card(suit, rank);
-				System.out.println(card);
+				deck.add(card);
 
 			}
 
 		}
 
 	}
-	
+
 	public int checkSize() {
-		
+
 		return deck.size();
 	}
 
@@ -42,5 +42,16 @@ public class Deck {
 
 	public void shuffleDeck() {
 		Collections.shuffle(deck);
+//		System.out.println(deck.toString());
 	}
+
+	@Override
+	public String toString() {
+		return  deck + " ";
+	}
+
+
+	
+	
+
 }
