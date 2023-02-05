@@ -1,48 +1,41 @@
 package com.skilldistiller.blackjack.entities;
 
-public class Player implements PlayHand {
+import java.util.Scanner;
 
-	private String name;
-	private Hand hand;
+public class Player extends Person {
+	Scanner sc = new Scanner(System.in);
 
 	public Player() {
+		super.setName("Player 1");
 
-	}
-
-	public Player(String name, Hand hand) {
-		super();
-		this.name = name;
-		this.hand = hand;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Hand getHand() {
-		return hand;
-	}
-
-	public void setHand(Hand hand) {
-		this.hand = hand;
 	}
 
 // plays hand
-	@Override
-	public void play() {
-		// TODO Auto-generated method stub
 
-	}
+	public void play(Deck deck) {
 
-	@Override
-	public String toString() {
-		return "Player [name=" + name + ", hand=" + hand + "]";
+		System.out.println("Would you like to Hit or Stand?\n" + "1 for Hit\n" + "2 for Stand.");
+
+		while (!sc.hasNextInt()) {
+			System.out.println("Please enter a number for the menu option");
+			sc.next();
+		}
+		int userIn = sc.nextInt();
+// if hit  else stay
+		if (userIn ==1) {
+			this.hitCard(deck);
+			System.out.println(this.toString());
+			if (this.getHand().calculateValue()>21) {
+				return;
 	}
-	
-	
+			else {
+				this.play(deck);
+				}
+		}
+		else {
+			System.out.println("Player 1 is Staying");
+		}
+		
+	}
 
 }

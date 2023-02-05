@@ -16,6 +16,7 @@ public class Card {
 
 	}
 
+
 	public int getValue() {
 		return rank.getValue();
 	}
@@ -34,7 +35,7 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return rank + " of " + suit + " " + this.getValue() + "\n";
+		return rank + " of " + suit;
 	}
 
 	@Override
