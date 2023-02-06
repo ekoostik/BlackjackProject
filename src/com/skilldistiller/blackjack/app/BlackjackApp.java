@@ -34,6 +34,9 @@ public class BlackjackApp {
 		
 		
 		pl1.play(theDeck);
+		dealer.play(theDeck);
+		
+		
 
 		
 

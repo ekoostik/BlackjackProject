@@ -24,8 +24,9 @@ public class Player extends Person {
 // if hit  else stay
 		if (userIn ==1) {
 			this.hitCard(deck);
-			System.out.println(this.toString());
+			System.out.println(this.toString() + this.getHand().calculateValue());
 			if (this.getHand().calculateValue()>21) {
+				System.out.println( this.getName()+ " has bust! \nGame Over");
 				return;
 	}
 			else {

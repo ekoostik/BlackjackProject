@@ -18,7 +18,7 @@ public abstract class Person {
 
 	public void hitCard(Deck deck) {
 		this.hand.addCard(deck);
-		System.out.println("Dealing a card...");
+		System.out.println("Dealing a card to " + this.name);
 
 	}
 
@@ -40,7 +40,7 @@ public abstract class Person {
 
 	@Override
 	public String toString() {
-		return name + "'s Hand is " + hand + "\n" + "Value " + this.getHand().calculateValue();
-	}
+		return name + "'s Hand is " + hand + "\n";
 
+}
 }
