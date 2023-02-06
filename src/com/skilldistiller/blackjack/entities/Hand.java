@@ -1,9 +1,10 @@
 package com.skilldistiller.blackjack.entities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hand {
-	private ArrayList<Card> handOfCards;
+	private List<Card> handOfCards;
 
 	// set up a hand
 	public Hand() {
@@ -29,6 +30,14 @@ public class Hand {
 	@Override
 	public String toString() {
 		return handOfCards + "";
+	}
+
+	public List<Card> getHandOfCards() {
+		return handOfCards;
+	}
+
+	public void setHandOfCards(List<Card> handOfCards) {
+		this.handOfCards = handOfCards;
 	}
 
 }

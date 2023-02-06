@@ -4,7 +4,7 @@ public class Dealer extends Person {
 
 	
 	public Dealer() {
-		super.setName("Dealer");
+	
 
 	}
 
@@ -13,14 +13,14 @@ public class Dealer extends Person {
 	public void play(Deck deck) {
 		while (this.getHand().calculateValue()<17) {
 			this.hitCard(deck);
-			System.out.println(this.toString() + this.getHand().calculateValue());
+//			System.out.println(this.toString());
 			if (this.getHand().calculateValue()>21) {
-				System.out.println( this.getName()+ " has bust! \nGame Over");
+				System.out.println( this.toString()+ "\nDealer Bust! \nGame Over");
 				return;
 		}
 		
 	}
-		System.out.println("Dealer stands");
+		System.out.println( this.toString()+ "\n Dealer Stands.\n");
 	}
 
 	

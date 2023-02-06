@@ -6,7 +6,7 @@ public class Player extends Person {
 	Scanner sc = new Scanner(System.in);
 
 	public Player() {
-		super.setName("Player 1");
+	;
 
 	}
 
@@ -24,17 +24,21 @@ public class Player extends Person {
 // if hit  else stay
 		if (userIn ==1) {
 			this.hitCard(deck);
-			System.out.println(this.toString() + this.getHand().calculateValue());
+			System.out.println(this.toString());
 			if (this.getHand().calculateValue()>21) {
-				System.out.println( this.getName()+ " has bust! \nGame Over");
+				System.out.println( this.getName()+ "  Bust! \nGame Over");
 				return;
 	}
 			else {
 				this.play(deck);
 				}
 		}
-		else {
-			System.out.println("Player 1 is Staying");
+		else if(userIn==2){
+			System.out.println("Player 1 is Staying\n");
+		}
+		else {  
+			System.out.println("Please enter 1 or 2");
+			this.play(deck);
 		}
 		sc.close();
 	}
