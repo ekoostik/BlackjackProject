@@ -36,7 +36,7 @@ public class Player extends Person {
 		else {
 			System.out.println("Player 1 is Staying");
 		}
-		
+		sc.close();
 	}
 
 }

@@ -43,4 +43,8 @@ public abstract class Person {
 		return name + "'s Hand is " + hand + "\n";
 
 }
+
+	public abstract void play(Deck theDeck);{
+		
+	}
 }
